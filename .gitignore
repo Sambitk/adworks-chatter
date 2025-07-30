@@ -1,0 +1,22 @@
+# Node.js / Angular
+node_modules/
+dist/
+.angular/
+.vscode/ # IDE files
+npm-debug.log*
+yarn-error.log
+
+# Python / Flask
+__pycache__/
+*.pyc
+.venv/
+.env
+venv/ # Common virtual environment name
+instance/ # Flask instance folder (if used)
+.idea/ # PyCharm/IntelliJ IDE files
+
+# General
+.DS_Store # macOS files
+Thumbs.db # Windows files
+*.log
+*.swp # Vim swap files
