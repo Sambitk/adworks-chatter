@@ -1,0 +1,21 @@
+<div class="chat-input-container">
+  <input
+    type="file"
+    #fileInput
+    class="hidden-file-input"
+    (change)="onFileSelected($event)"
+  />
+  <button class="attach-button" (click)="openFileBrowser()">
+    <img src="/assets/images/attach-x-btn.png" alt="Attach File" />
+  </button>
+  <input
+    type="text"
+    class="message-input"
+    [(ngModel)]="messageText"
+    (keydown.enter)="sendMessage()"
+    placeholder="Type a message..."
+  />
+  <button class="send-button" [disabled]="!messageText" (click)="sendMessage()">
+    <img src="/assets/images/send-x-btn.png" alt="Send" />
+  </button>
+</div>

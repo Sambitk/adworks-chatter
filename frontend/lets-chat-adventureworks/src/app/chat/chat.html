@@ -1,0 +1,14 @@
+<div class="chat-container">
+  <div class="messages-list">
+    <app-chat-message
+      *ngFor="let message of chatMessages"
+      [message]="message"
+      [currentUser]="currentUser"
+    ></app-chat-message>
+  </div>
+
+  <app-chat-input
+    (sendMessageEvent)="handleSendMessage($event)"
+    (attachFileEvent)="handleAttachFile()"
+  ></app-chat-input>
+</div>

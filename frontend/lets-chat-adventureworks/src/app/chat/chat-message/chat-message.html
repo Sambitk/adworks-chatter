@@ -1,0 +1,11 @@
+<div class="message-container" [ngClass]="{'my-message': isMyMessage, 'other-message': !isMyMessage}">
+  <div class="message-content">
+    <div class="sender-info">
+      <span class="sender-name">{{ message.senderName }}</span>
+      <span class="timestamp">{{ message.timestamp | date:'shortTime' }}</span>
+    </div>
+    <div class="message-text">
+      {{ message.text }}
+    </div>
+  </div>
+</div>
