@@ -1,0 +1,24 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh; /* Takes up the full viewport height */
+  width: 100%;
+  max-width: 800px; /* Optional: limit the max width */
+  margin: 0 auto; /* Optional: center the chat container */
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.messages-list {
+  flex-grow: 1; /* Allows the messages area to take up all available space */
+  overflow-y: auto; /* Adds a scrollbar for message overflow */
+  padding: 15px;
+  display: flow-root;
+  flex-direction: column;
+}
+
+/* Add a margin to space out the input from the messages */
+app-chat-input {
+  margin-top: auto;
+}

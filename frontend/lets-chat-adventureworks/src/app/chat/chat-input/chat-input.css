@@ -1,0 +1,54 @@
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #0f1cce;
+  border-top: 1px solid #ccc;
+  gap: 10px;
+}
+
+.message-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+.message-input:focus {
+  border-color: #007bff;
+}
+
+.send-button, .attach-button {
+  background-color: transparent; /* Changed to transparent */
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.send-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.send-button:hover:not(:disabled), .attach-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Style for the image icons inside the buttons */
+.send-button img, .attach-button img {
+  width: 40px;
+  height: 40px;
+}
+
+/* This class hides the file input element visually */
+.hidden-file-input {
+  display: none;
+}

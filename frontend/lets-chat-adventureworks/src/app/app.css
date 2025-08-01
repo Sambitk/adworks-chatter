@@ -1,0 +1,32 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  /* min-height: 10vh; */
+  overflow-x: hidden; /* Prevent horizontal scrollbar during transition */
+}
+
+/* Styles to push the header and content when the sidebar is open */
+.main-layout.sidebar-open app-header,
+.main-layout.sidebar-open .content-area {
+  transform: translateX(250px); /* Push content by the sidebar's width */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Default state for header and content area (no push) */
+app-header,
+.content-area {
+  transition: transform 0.3s ease-in-out; /* Apply transition for smooth animation */
+}
+
+.content-area {
+  flex-grow: 1; /* Allows main content to take remaining vertical space */
+  padding: 1rem;
+}
+
+/* Media query for smaller screens: sidebar should overlay instead of pushing */
+@media (max-width: 768px) {
+  .main-layout.sidebar-open app-header,
+  .main-layout.sidebar-open .content-area {
+    transform: translateX(0); /* On small screens, do not push; sidebar will overlay */
+  }
+}

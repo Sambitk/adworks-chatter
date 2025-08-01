@@ -1,2 +1,24 @@
-<h1>app root page</h1>
-<router-outlet></router-outlet>
+
+<div class="main-layout" [class.sidebar-open]="showSidebar">
+  <!-- Header Component -->
+  <app-header
+    [headerText]="currentTitle"
+    (hamburgerClick)="onHamburgerClick()"
+    (profileClick)="onProfileClick()"
+  ></app-header>
+
+  <!-- Sidebar Component (fixed position, slides over) -->
+  <app-sidebar
+    [isOpen]="showSidebar"
+    (newChat)="onNewChat()"
+    (settings)="onSettingsClick()"
+  ></app-sidebar>
+
+  <main class="content-area">
+    <!-- <h2>Welcome to the App!</h2>
+    <p>This is the main content area of your Angular application.</p>
+    <p>Click the hamburger icon in the header to open/close the sidebar.</p> -->
+    <!-- The router-outlet would typically go here -->
+    <router-outlet></router-outlet>
+  </main>
+</div>

@@ -1,0 +1,26 @@
+<!-- Overlay that covers the rest of the screen when sidebar is open -->
+
+<!-- Main Sidebar Container -->
+<div class="sidebar-container" [class.open]="isOpen">
+  <div class="sidebar-content">
+    <!-- Top section for "New Chat" button -->
+    <div class="sidebar-top">
+      <button class="sidebar-button new-chat-button" (click)="onNewChatClick()">
+        <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
+          <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+        </svg>
+        <span>New chat</span>
+      </button>
+    </div>
+
+    <!-- Bottom section for "Settings" button -->
+    <div class="sidebar-bottom">
+      <button class="sidebar-button settings-button" (click)="onSettingsClick()">
+        <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
+          <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.09-.75-1.72-1.03L13.93 3c-.08-.24-.3-.4-.55-.4h-4c-.25 0-.47.16-.55.4L8.08 5.15c-.63.28-1.21.63-1.72 1.03l-2.49-1c-.22-.08-.49 0-.61.22l-2 3.46c-.12.22-.07.49.12.64l2.11 1.65c-.04.32-.07.64-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.09.75 1.72 1.03L10.07 21c.08.24.3.4.55.4h4c.25 0 .47-.16.55-.4l.79-2.61c.63-.28 1.21-.63 1.72-1.03l2.49 1c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+        </svg>
+        <span>Settings</span>
+      </button>
+    </div>
+  </div>
+</div>
