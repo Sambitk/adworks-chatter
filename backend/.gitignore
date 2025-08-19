@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+venv/ # Common virtual environment name
+instance/ # Flask instance folder (if used)
+.idea/ # PyCharm/IntelliJ IDE files
